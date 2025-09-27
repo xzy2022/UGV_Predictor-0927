@@ -1,0 +1,35 @@
+{
+    "configurations": [
+        {
+            "name": "ROS",
+            "includePath": [
+                "${workspaceFolder}/**",
+                "/usr/include/pcl-1.10/**",
+                "/usr/include/vtk-7.1/**",
+                "/usr/include/eigen3/**",
+                "/usr/include/opencv4/**",
+                "/usr/include/python3.8/**",
+                "/opt/ros/noetic/include/**",
+                "/home/guanglei/UGV_2023/devel/include",
+                "/home/guanglei/ThirdParty/libtorch/include/**"
+            ],
+            "defines": [],
+            "compilerPath": "/usr/bin/g++",
+            "cStandard": "c11",
+            "cppStandard": "c++14",
+            "intelliSenseMode": "gcc-x64",
+            "browse": {
+                "path": [
+                    "${workspaceFolder}",
+                    "/usr/include/pcl-1.10",
+                    "/usr/include/vtk-7.1",
+                    "/usr/include/eigen3",
+                    "/usr/include/opencv4",
+                    "/opt/ros/noetic/include"
+                ],
+                "limitSymbolsToIncludedHeaders": true
+            }
+        }
+    ],
+    "version": 4
+}

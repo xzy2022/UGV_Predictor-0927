@@ -1,0 +1,25 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "catkin_make",	 //代表提示的描述性信息
+			"type": "shell",	 //可以选择shell或者process,如果是shell代码是在shell里面运行一个命令，如果是process代表作为一个进程来运行
+			"command": "catkin_make  -j32", 	//需要运行的命令
+			"args": [			
+				"-j", "32"			//  需要的一些参数
+            ],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"presentation": {
+				"reveal":"always"		// 可选always或者silence，代表是否输出信息
+			},
+			"problemMatcher":"$msCompile",
+			"detail": "CMake template build task"
+		}
+	]
+}
+
+// catkin_make -DCMAKE_BUILD_TYPE=Debug -DCMAKE_EXPORT_COMPILE_COMMANDS=Yes
+//-DCMAKE_EXPORT_COMPILE_COMMANDS=ON 

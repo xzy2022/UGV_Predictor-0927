@@ -1,0 +1,112 @@
+{
+    // 使用 IntelliSense 了解相关属性。 
+    // 悬停以查看现有属性的描述。
+    // 欲了解更多信息，请访问: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        
+   
+
+        {
+            "name": "ROS: Launch",
+            "type": "ros",
+            "request": "launch",
+            "target": "/home/tracer/workspace/code/c++/code2023/catkin_slam/src/FAST_LIO_ax7/launch/mapping_rs128.launch"
+        },
+
+
+        {
+            "name": "node_imageProject",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/devel/lib/lio_sam/lio_sam_featureExtraction",
+            // fill previous line with the node you want to debug
+            "args": [], // parameter to this node 
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "prerun",
+            "MIMode": "gdb",
+            "avoidWindowsConsoleRedirection": true,
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+
+        {
+            "name": "node_featureAssociate",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/devel/lib/lio_sam/lio_sam_imageProjection",
+            // fill previous line with the node you want to debug
+            "args": [], // parameter to this node 
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "prerun",
+            "MIMode": "gdb",
+            "avoidWindowsConsoleRedirection": true,
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+
+        {
+            "name": "node_mapOptimize",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/devel/lib/lio_sam/lio_sam_imuPreintegration",
+            // fill previous line with the node you want to debug
+            "args": [], // parameter to this node 
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "prerun",
+            "MIMode": "gdb",
+            "avoidWindowsConsoleRedirection": true,
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+
+
+        {
+            "name": "node_transformFusion",
+            "type": "cppdbg",
+            "request": "launch",
+            "program": "${workspaceFolder}/devel/lib/lio_sam/lio_sam_mapOptmization",
+            // fill previous line with the node you want to debug
+            "args": [], // parameter to this node 
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "externalConsole": false,
+            "preLaunchTask": "prerun",
+            "MIMode": "gdb",
+            "avoidWindowsConsoleRedirection": true,
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+
+    ]
+}
